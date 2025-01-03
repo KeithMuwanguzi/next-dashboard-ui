@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image"
+import { useState } from "react"
 
 const NavBar = () => {
-    const number  = 12;
+    const [number, setNumber] = useState(0);
     return (
         <div className="flex items-center justify-between p-4">
             {/**Search Bar */}
@@ -11,14 +13,16 @@ const NavBar = () => {
             </div>
             {/**Icons and Name */}
             <div className="flex items-center gap-5 w-full justify-end">
-                <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer">
+                <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer" onClick={() => setNumber(number + 1)}>
                     <Image src="/message.png" alt="" width={20} height={20}/>
                 </div>
                 <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer relative">
                     <Image src="/announcement.png" alt="" width={20} height={20}/>
-                    <div className="absolute -top-2 -right-3 w-4 h-4 text-white flex items-center justify-center bg-purple-500 rounded-full">
-                        <span className="text-[10px]">{number}</span>
-                    </div>
+                    {number > 0 && (
+                        <div className="absolute -top-2 -right-3 w-5 h-5 text-white flex items-center justify-center bg-purple-500 rounded-full">
+                            <span className="text-[10px]">{number >= 100 ? '99+' : number}</span>
+                        </div>
+                    )}
                 </div>
                 <div className="flex flex-col">
                     <span className="text-[10px] leading-3 font-medium">Keith Muwanguzi</span>
