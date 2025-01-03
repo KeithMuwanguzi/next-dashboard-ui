@@ -1,3 +1,4 @@
+import AnnouncementsCard from "@/components/Announcement"
 import AttendanceChart from "@/components/AttendanceChart"
 import CalendarCard from "@/components/Calendar"
 import CountChart from "@/components/CountChart"
@@ -43,7 +44,12 @@ const AdminPage = () => {
             <div className="w-full lg:w-1/3 flex flex-col gap-8">
                 {/**CALENDAR CARD */}
                 <div className="">
-                    <CalendarCard/>
+                    <div className="">
+                        <CalendarCard/>
+                    </div>
+                    <div className="h-[300px]">
+                        <AnnouncementsCard/>
+                    </div>
                 </div>
             </div>
         </div>

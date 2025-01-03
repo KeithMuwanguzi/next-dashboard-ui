@@ -45,7 +45,7 @@ const AttendanceChart = () => {
         <div className="bg-white rounded-xl p-4 w-full h-full">
             {/* TITLE */}
             <div className='flex justify-between'>
-                <h1>Teachers' Attendance</h1>
+                <h1 className='text-[13px] font-semibold'>Teachers' Attendance</h1>
                 <Image src="/moreDark.png" alt='' width={20} height={20}/>
             </div>
             {/* CHART */}
@@ -57,8 +57,8 @@ const AttendanceChart = () => {
                     barSize={15}
                     >
                     <CartesianGrid strokeDasharray="3 3" vertical={false}/>
-                    <XAxis dataKey="name" axisLine={false} tickLine={false} />
-                    <YAxis axisLine={false} tickLine={false}/>
+                    <XAxis dataKey="name" axisLine={false} tickLine={false} fontSize={13}/>
+                    <YAxis axisLine={false} tickLine={false} fontSize={13}/>
                     <Tooltip />
                     <Legend align='left' verticalAlign='top' wrapperStyle={{paddingTop:"10px", paddingBottom:"20px"}}/>
                     <Bar dataKey="present" fill="#FAE27C" legendType='circle' radius={[10,10,0,0]}/>

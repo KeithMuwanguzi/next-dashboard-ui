@@ -19,4 +19,5 @@ abbr:where([title]) {
 
 .react-calendar__navigation__label__labelText{
     font-weight: 600;
+    font-size: 13px !important;
 }

@@ -69,7 +69,7 @@ const FinanceChart = () => {
         <div className='bg-white rounded-xl p-4 w-full h-full'>
             {/**TITLE */}
             <div className="flex justify-between">
-                <h1 className="">Finance</h1>
+                <h1 className="text-[13px] font-semibold">Finance</h1>
                 <Image src="/moreDark.png" alt='' width={20} height={20}/>
             </div>
             {/**CHART */}
@@ -81,8 +81,8 @@ const FinanceChart = () => {
                         data={data}
                         >
                         <CartesianGrid strokeDasharray="3 3" vertical={false} stroke='#ddd'/>
-                        <XAxis dataKey="name" axisLine={false} tickLine={false} />
-                        <YAxis axisLine={false} tickLine={false} />
+                        <XAxis dataKey="name" axisLine={false} tickLine={false} fontSize={13}/>
+                        <YAxis axisLine={false} tickLine={false} fontSize={13}/>
                         <Tooltip />
                         <Legend align='center' verticalAlign='top' wrapperStyle={{paddingTop:"10px", paddingBottom:"20px"}}/>
                         <Line type="monotone" dataKey="income" stroke="#FAE27C" strokeWidth={3} />

@@ -25,8 +25,8 @@ const NavBar = () => {
                     )}
                 </div>
                 <div className="flex flex-col">
-                    <span className="text-[10px] leading-3 font-medium">Keith Muwanguzi</span>
-                    <span className="text-[8px] text-gray-500 text-right">Admin</span>
+                    <span className="text-[13px] leading-3 font-medium">Keith Muwanguzi</span>
+                    <span className="text-[10px] text-gray-500 text-right">Admin</span>
                 </div>
                 <Image src="/avatar.png" alt="" width={36} height={36} className="rounded-full cursor-pointer"/>
             </div>
