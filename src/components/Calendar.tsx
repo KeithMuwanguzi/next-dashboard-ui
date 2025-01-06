@@ -47,7 +47,7 @@ const CalendarCard = () => {
                 </div>
                 {events.map(
                         e=> (
-                            <div className='p-4 rounded-md border-2 border-gray-100 border-t-4 odd:border-t-lamaSky even:border-t-lamaPurple m-2'>
+                            <div key={e.id} className='p-4 rounded-md border-2 border-gray-100 border-t-4 odd:border-t-lamaSky even:border-t-lamaPurple m-2'>
                                 <div className="flex justify-between" key={e.id}>
                                     <h1 className="font-semibold text-gray-600 text-[13px]">{e.title}</h1>
                                     <span className="text-[13px] text-gray-600">{e.time}</span>
